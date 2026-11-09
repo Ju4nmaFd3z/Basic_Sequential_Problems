@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio5();
+            Ejercicio6();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -134,6 +134,21 @@ namespace Ejercicios_Secuenciales
 
             Console.WriteLine($"La suma de los dos primeros es: {n1 + n2}");
             Console.WriteLine($"El producto del tercero y el cuarto es: {n3 * n4}");
+        }
+
+        // Ejercicio 6: suma y promedio de cuatro valores
+        static void Ejercicio6()
+        {
+            double v1 = LeerDecimal("Introduce el primer valor: ");
+            double v2 = LeerDecimal("Introduce el segundo valor: ");
+            double v3 = LeerDecimal("Introduce el tercer valor: ");
+            double v4 = LeerDecimal("Introduce el cuarto valor: ");
+
+            double suma = v1 + v2 + v3 + v4;
+            double promedio = suma / 4;
+
+            Console.WriteLine($"La suma es: {suma}");
+            Console.WriteLine($"El promedio es: {promedio}");
         }
     }
 }
