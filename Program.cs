@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio2();
+            Ejercicio3();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -24,6 +24,23 @@ namespace Ejercicios_Secuenciales
                 if (!esValido)
                 {
                     Console.WriteLine("Entrada no válida. Introduce un número entero.");
+                }
+            } while (!esValido);
+            return numero;
+        }
+
+        // Pide un número con decimales y repite hasta que sea válido
+        static double LeerDecimal(string mensaje)
+        {
+            double numero;
+            bool esValido;
+            do
+            {
+                Console.Write(mensaje);
+                esValido = double.TryParse(Console.ReadLine(), out numero);
+                if (!esValido)
+                {
+                    Console.WriteLine("Entrada no válida. Introduce un número.");
                 }
             } while (!esValido);
             return numero;
@@ -69,6 +86,34 @@ namespace Ejercicios_Secuenciales
 
             // F2 muestra siempre dos decimales
             Console.WriteLine($"Cantidad a pagar: {total:F2}€");
+        }
+
+        // Ejercicio 3: funciones de la clase Math
+        static void Ejercicio3()
+        {
+            double numero = LeerDecimal("Introduce un número: ");
+
+            // Para Max y Min necesitamos un segundo número, lo fijamos aquí
+            double otroNumero = 10;
+
+            Console.WriteLine($"Valor absoluto: {Math.Abs(numero)}");
+            Console.WriteLine($"Potencia al cubo: {Math.Pow(numero, 3)}");
+
+            // La raíz de un negativo no existe, así que lo comprobamos
+            if (numero >= 0)
+            {
+                Console.WriteLine($"Raíz cuadrada: {Math.Sqrt(numero)}");
+            }
+            else
+            {
+                Console.WriteLine("No existe la raíz cuadrada de un número negativo.");
+            }
+
+            // Seno y coseno trabajan con radianes
+            Console.WriteLine($"Seno: {Math.Sin(numero)}");
+            Console.WriteLine($"Coseno: {Math.Cos(numero)}");
+            Console.WriteLine($"Máximo entre {numero} y {otroNumero}: {Math.Max(numero, otroNumero)}");
+            Console.WriteLine($"Mínimo entre {numero} y {otroNumero}: {Math.Min(numero, otroNumero)}");
         }
     }
 }
