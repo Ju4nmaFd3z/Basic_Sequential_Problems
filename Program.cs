@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio8();
+            Ejercicio9();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -174,6 +174,30 @@ namespace Ejercicios_Secuenciales
             double notaFinal = promedioParciales * 0.5 + examen * 0.3 + trabajo * 0.2;
 
             Console.WriteLine($"Tu nota final en Desarrollo de Interfaces es: {notaFinal:F2}");
+        }
+
+        // Ejercicio 9: porcentaje de participación de tres socios
+        static void Ejercicio9()
+        {
+            double aporte1 = LeerDecimal("Aportación del socio 1: ");
+            double aporte2 = LeerDecimal("Aportación del socio 2: ");
+            double aporte3 = LeerDecimal("Aportación del socio 3: ");
+
+            double total = aporte1 + aporte2 + aporte3;
+
+            // Si no hay aportaciones, no se puede calcular el porcentaje
+            if (total == 0)
+            {
+                Console.WriteLine("El total aportado es 0, no se pueden calcular porcentajes.");
+                return;
+            }
+
+            double porcentaje1 = aporte1 / total * 100;
+            double porcentaje2 = aporte2 / total * 100;
+            double porcentaje3 = aporte3 / total * 100;
+
+            Console.WriteLine("El porcentaje del socio 1 es {0:F2}%, del socio 2 es {1:F2}% y del socio 3 es {2:F2}%",
+                porcentaje1, porcentaje2, porcentaje3);
         }
     }
 }
