@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio4();
+            Ejercicio5();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -122,6 +122,18 @@ namespace Ejercicios_Secuenciales
             double lado = LeerDecimal("Introduce el valor de un lado: ");
             double perimetro = lado * 4;
             Console.WriteLine($"El perímetro del cuadrado es: {perimetro}");
+        }
+
+        // Ejercicio 5: suma de los dos primeros y producto de los dos últimos
+        static void Ejercicio5()
+        {
+            double n1 = LeerDecimal("Introduce el primer número: ");
+            double n2 = LeerDecimal("Introduce el segundo número: ");
+            double n3 = LeerDecimal("Introduce el tercer número: ");
+            double n4 = LeerDecimal("Introduce el cuarto número: ");
+
+            Console.WriteLine($"La suma de los dos primeros es: {n1 + n2}");
+            Console.WriteLine($"El producto del tercero y el cuarto es: {n3 * n4}");
         }
     }
 }
