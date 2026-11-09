@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio6();
+            Ejercicio7();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -149,6 +149,16 @@ namespace Ejercicios_Secuenciales
 
             Console.WriteLine($"La suma es: {suma}");
             Console.WriteLine($"El promedio es: {promedio}");
+        }
+
+        // Ejercicio 7: coste total de una compra
+        static void Ejercicio7()
+        {
+            double precio = LeerDecimal("Precio del artículo: ");
+            int cantidad = LeerEntero("Cantidad que lleva el cliente: ");
+
+            double total = precio * cantidad;
+            Console.WriteLine($"El coste total es: {total:F2}€");
         }
     }
 }
