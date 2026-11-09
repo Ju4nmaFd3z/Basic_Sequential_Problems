@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio9();
+            Ejercicio10();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -198,6 +198,16 @@ namespace Ejercicios_Secuenciales
 
             Console.WriteLine("El porcentaje del socio 1 es {0:F2}%, del socio 2 es {1:F2}% y del socio 3 es {2:F2}%",
                 porcentaje1, porcentaje2, porcentaje3);
+        }
+
+        // Ejercicio 10: comprobar si un texto empieza por "www"
+        static void Ejercicio10()
+        {
+            Console.Write("Introduce un texto: ");
+            string texto = Console.ReadLine() ?? "";
+
+            bool empiezaPorWww = texto.StartsWith("www");
+            Console.WriteLine(empiezaPorWww);
         }
     }
 }
