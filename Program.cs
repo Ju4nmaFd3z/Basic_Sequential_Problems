@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio1();
+            Ejercicio2();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -49,6 +49,26 @@ namespace Ejercicios_Secuenciales
             {
                 Console.WriteLine("No se puede dividir entre cero.");
             }
+        }
+
+        // Ejercicio 2: cuenta del bar
+        static void Ejercicio2()
+        {
+            // Precios fijos del bar
+            const double PRECIO_HAMBURGUESA = 5.00;
+            const double PRECIO_PAPAS = 1.75;
+            const double PRECIO_BEBIDA = 1.10;
+
+            int hamburguesas = LeerEntero("Cantidad de hamburguesas: ");
+            int papas = LeerEntero("Cantidad de papas: ");
+            int bebidas = LeerEntero("Cantidad de bebidas: ");
+
+            double total = hamburguesas * PRECIO_HAMBURGUESA
+                         + papas * PRECIO_PAPAS
+                         + bebidas * PRECIO_BEBIDA;
+
+            // F2 muestra siempre dos decimales
+            Console.WriteLine($"Cantidad a pagar: {total:F2}€");
         }
     }
 }
