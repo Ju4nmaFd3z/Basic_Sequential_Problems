@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio3();
+            Ejercicio4();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -114,6 +114,14 @@ namespace Ejercicios_Secuenciales
             Console.WriteLine($"Coseno: {Math.Cos(numero)}");
             Console.WriteLine($"Máximo entre {numero} y {otroNumero}: {Math.Max(numero, otroNumero)}");
             Console.WriteLine($"Mínimo entre {numero} y {otroNumero}: {Math.Min(numero, otroNumero)}");
+        }
+
+        // Ejercicio 4: perímetro de un cuadrado
+        static void Ejercicio4()
+        {
+            double lado = LeerDecimal("Introduce el valor de un lado: ");
+            double perimetro = lado * 4;
+            Console.WriteLine($"El perímetro del cuadrado es: {perimetro}");
         }
     }
 }
