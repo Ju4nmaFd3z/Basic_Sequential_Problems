@@ -6,7 +6,7 @@ namespace Ejercicios_Secuenciales
     {
         static void Main(string[] args)
         {
-            Ejercicio7();
+            Ejercicio8();
 
             Console.WriteLine("Pulsa una tecla para salir...");
             Console.ReadKey();
@@ -159,6 +159,21 @@ namespace Ejercicios_Secuenciales
 
             double total = precio * cantidad;
             Console.WriteLine($"El coste total es: {total:F2}€");
+        }
+
+        // Ejercicio 8: nota final del módulo
+        static void Ejercicio8()
+        {
+            double parcial1 = LeerDecimal("Nota del primer parcial: ");
+            double parcial2 = LeerDecimal("Nota del segundo parcial: ");
+            double examen = LeerDecimal("Nota del examen: ");
+            double trabajo = LeerDecimal("Nota del trabajo final: ");
+
+            // 50% promedio de parciales, 30% examen, 20% trabajo
+            double promedioParciales = (parcial1 + parcial2) / 2;
+            double notaFinal = promedioParciales * 0.5 + examen * 0.3 + trabajo * 0.2;
+
+            Console.WriteLine($"Tu nota final en Desarrollo de Interfaces es: {notaFinal:F2}");
         }
     }
 }
